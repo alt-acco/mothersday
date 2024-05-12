@@ -6,29 +6,80 @@
     <title>Happy Mother's Day!</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px; /* Add some padding for better readability */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 80%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         img {
-            max-width: 80%; /* Make sure the image doesn't overflow the viewport */
-            height: auto;
-            margin-bottom: 20px; /* Add some space below the image */
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            animation: slideIn 1s ease-in-out;
         }
-        #message {
-            margin-top: 20px;
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
         }
         h1 {
-            font-size: 25px; /* Increase the font size for better readability */
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+            animation: scaleIn 1s ease-in-out;
+        }
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
         }
         p {
-            font-size: 20px; /* Increase the font size for better readability */
+            font-size: 16px;
+            color: #666;
+            animation: fadeInText 1s ease-in-out;
+        }
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="img.jpeg" alt="Happy Mother's Day Image">
-    <div id="message">
+    <div class="container">
+        <img src="img.jpeg" alt="Happy Mother's Day Image">
         <h1>Happy Mother's Day, Mom!</h1>
         <p>Thank you for everything you do. You're an amazing role model and teach me to stay determined on my path in life. Thank you for being my first teacher and my favorite one. Love you loads! ❤️</p>
     </div>
